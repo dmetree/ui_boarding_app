@@ -182,24 +182,126 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
-        android:background="#6b76b5"
+        android:background="#868dba"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"/>
 
+
     <ImageView
         android:id="@+id/low"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/high"/>
 
+    <TextView
+        android:id="@+id/gateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="GATE"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/high"
+        app:layout_constraintEnd_toEndOf="@+id/high"
+        app:layout_constraintStart_toStartOf="@+id/high"
+        app:layout_constraintTop_toTopOf="@+id/high"/>
 
+    <TextView
+        android:id="@+id/terminalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TERMIANL"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gateLabel"
+        app:layout_constraintEnd_toStartOf="@+id/gateLabel"
+        app:layout_constraintStart_toStartOf="@+id/high"
+        app:layout_constraintTop_toTopOf="@+id/gateLabel"/>
 
+    <TextView
+        android:id="@+id/seatLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="SEAT"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gateLabel"
+        app:layout_constraintEnd_toEndOf="@+id/high"
+        app:layout_constraintStart_toEndOf="@+id/gateLabel"
+        app:layout_constraintTop_toTopOf="@+id/gateLabel"/>
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="2"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/terminalLabel"
+        app:layout_constraintStart_toStartOf="@+id/terminalLabel"
+        app:layout_constraintTop_toBottomOf="@+id/high"/>
+
+    <TextView
+        android:id="@+id/gate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="58B"
+        android:textColor="@android:color/background_light"
+        android:textSize="40sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/gateLabel"
+        app:layout_constraintStart_toStartOf="@+id/gateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/high"/>
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/background_light"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/seatLabel"
+        app:layout_constraintStart_toStartOf="@+id/seatLabel"
+        app:layout_constraintTop_toTopOf="@+id/gate"
+        tools:text="24A"/>
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="UDA 2465"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="85dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/low"
+        app:srcCompat="@mipmap/qr_code"/>
 
 
 </android.support.constraint.ConstraintLayout>
