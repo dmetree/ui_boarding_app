@@ -10,6 +10,7 @@ import com.dvb.ui_boarding_app.utilities.FakeDataUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +43,19 @@ public class MainActivity extends AppCompatActivity {
         mBinding.departure.setText(departureTime);
         mBinding.arrival.setText(arrivalTime);
 
+//        format the total minutes until boarding
+        long totalMinutesUntilBoarding = info.getMinutesUntilBoarding();
+        long hoursUntilBoarding = TimeUnit.MINUTES.toHours(totalMinutesUntilBoarding);
+        long minutesLessHoursUntilBoarding =
+                totalMinutesUntilBoarding - TimeUnit.HOURS.toMinutes(hoursUntilBoarding);
+
+        String hoursAndMinutesUntilBoarding = getString(R.string.countDownFormat,
+                hoursUntilBoarding, minutesLessHoursUntilBoarding);
+
+        mBinding.boardingIn.setText(hoursAndMinutesUntilBoarding);
+        mBinding.terminal.setText(info.departureTerminal);
+        mBinding.gate.setText(info.departureGate);
+        mBinding.seat.setText(info.seatNumber);
     }
 
 }
