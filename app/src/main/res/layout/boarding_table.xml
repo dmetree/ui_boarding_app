@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/high"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#868dba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/low"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/high"/>
+
+    <TextView
+        android:id="@+id/gateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="GATE"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/high"
+        app:layout_constraintEnd_toEndOf="@+id/high"
+        app:layout_constraintStart_toStartOf="@+id/high"
+        app:layout_constraintTop_toTopOf="@+id/high"/>
+
+    <TextView
+        android:id="@+id/terminalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TERMINAL"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gateLabel"
+        app:layout_constraintEnd_toStartOf="@+id/gateLabel"
+        app:layout_constraintStart_toStartOf="@+id/high"
+        app:layout_constraintTop_toTopOf="@+id/gateLabel"/>
+
+    <TextView
+        android:id="@+id/seatLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="SEAT"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gateLabel"
+        app:layout_constraintEnd_toEndOf="@+id/high"
+        app:layout_constraintStart_toEndOf="@+id/gateLabel"
+        app:layout_constraintTop_toTopOf="@+id/gateLabel"/>
+
+    <TextView
+        android:id="@+id/terminal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/terminalLabel"
+        app:layout_constraintStart_toStartOf="@+id/terminalLabel"
+        app:layout_constraintTop_toBottomOf="@+id/high"
+        tools:text="2"/>
+
+    <TextView
+        android:id="@+id/gate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/background_light"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/gateLabel"
+
+        app:layout_constraintStart_toStartOf="@+id/gateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/high"
+        tools:text="58B"/>
+
+    <TextView
+        android:id="@+id/seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/background_light"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/seatLabel"
+        app:layout_constraintStart_toStartOf="@+id/seatLabel"
+        app:layout_constraintTop_toTopOf="@+id/gate"
+        tools:text="24A"/>
+
+</android.support.constraint.ConstraintLayout>
